@@ -1320,17 +1320,25 @@ namespace BQE.Core.OAuth2.SampleApp.DotNet
         /// <param name="output">string to be appended</param>
         public void LogMessage(string logMsg)
         {
-            //Console.WriteLine(logMsg);
-            System.IO.StreamWriter sw = System.IO.File.AppendText(GetLogPath() + "CoreAppLogs.txt");
             try
             {
-                string logLine = System.String.Format("{0:G}: {1}.", System.DateTime.Now, logMsg);
-                sw.WriteLine(logLine);
+                //Console.WriteLine(logMsg);
+                System.IO.StreamWriter sw = System.IO.File.AppendText(GetLogPath() + "CoreAppLogs.txt");
+                try
+                {
+                    string logLine = System.String.Format("{0:G}: {1}.", System.DateTime.Now, logMsg);
+                    sw.WriteLine(logLine);
+                }
+                finally
+                {
+                    sw.Close();
+                }
             }
-            finally
+            catch(Exception ex)
             {
-                sw.Close();
+
             }
+            
         }
                
 
