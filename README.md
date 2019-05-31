@@ -1,4 +1,5 @@
 # ASP.NET Sample App
+A sample app demonstrating OAuth 2.0 and other features using Core API.
 
 ## Getting Started:
 
