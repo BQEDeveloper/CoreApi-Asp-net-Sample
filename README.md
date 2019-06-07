@@ -18,7 +18,7 @@ To successfully run this app, you need the following:
   
 ### Run Your Application:
 
-All the configuration of this app is located in web.config. Its values must match exactly with what is listed in the app settings on the developer portal. To get started, you need to make the required changes in web.config appsettings section. You can set the preferences like required endpoint urls, client app credentials and desired scopes for authentication. OAuth 2.0 needs read:core or readwrite:core scopes for consuming Core APIs. Additionally, offline_access scope will provide the refresh token while authenticating the client app. openid and profile scopes will provide user information like name, family name, email and will not work while connecting with Core.
+All the configuration of this app is located in web.config. Its values must match exactly with what is listed in the app settings on the Developer Portal. To get started, you need to make the required changes in the web.config appsettings section. You can set the preferences like required endpoint urls, client app credentials and desired scopes for authentication. OAuth 2.0 needs read:core or readwrite:core scopes for consuming Core APIs. Additionally, offline_access scope will provide the refresh token while authenticating the client app. Openid and profile scopes will provide user information like name, family name, email and will not work while connecting with Core.
 
 ### What is supported?
 
